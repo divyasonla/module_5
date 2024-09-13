@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="gal.css">
+
+</head>
+<body>
+    <div class="full-img"id="fullImgBox">
+         <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" id="fullImg" >
+         <span onclick="closefullImg()">X</span>
+    </div> 
+    
+    <div class="img-gallery">
+        <img src="https://i.pinimg.com/236x/24/10/00/2410000ea0484400d8a6f0093c95c5f7.jpg" onclick="openfullImg(this.src)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCIvdcQG8GZLmZo6gcDF2pNdFFr2zgTsvj7Q&s" onclick="openfullImg(this.src)">
+        <img src="https://i.pinimg.com/236x/e5/3d/47/e53d47c47284d7290f7d4cdef9792090.jpg" onclick="openfullImg(this.src)" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFm3V2IF95HqaKuE4t3UU6MpLR_mMW2Ju4sg&s" onclick="openfullImg(this.src)">      
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh2JC0BPRctWByHzYM0vv51pU2AHwtm1mnpg&s"onclick="openfullImg(this.src)" >
+          <img src="https://i.pinimg.com/736x/03/a4/7d/03a47d20c84ae40127e17b522504efcd.jpg" onclick="openfullImg(this.src)">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ1lo67I4XWqomu4QQfRoK9JqSmYKOQG_QsA&s" onclick="openfullImg(this.src)">
+          <img src="https://cache.careers360.mobi/media/article_images/2023/1/24/2-Minute-Speech-On-Freedom-Fighters.jpg" onclick="openfullImg(this.src)">      
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJwWxqeKhCDt2iwRIqY_m9xe_KfyakMoe5hw&s" onclick="openfullImg(this.src)">      
+          <img src="https://static.toiimg.com/thumb/msid-89187621,width-400,height-225,resizemode-72/89187621.jpg" onclick="openfullImg(this.src)">      
+          <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMOPhdPCf7XVgs0syBeGh4JomIcpuGW9e1zF8SLI-Q5bLeWu2MY-8fpaksxq4aXZslKMg&usqp=CAU" onclick="openfullImg(this.src)">       -->
+
+    </div>
+    <script>
+        var fullImgBox=document.getElementById("fullImgBox")
+        var fullImg=document.getElementById("fullImg");
+
+        function openfullImg(pic){
+         fullImgBox.style.display ="flex";
+         fullImg.src = pic;
+        }
+        function closefullImg(){
+            fullImgBox.style.display = "none"
+        }
+    </script>
+    <style>
+        .img-gallery{
+    width: 80%;
+    margin: 100px auto 50px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+}
+
+.img-gallery img{
+    width: 100%;
+    cursor: pointer;
+
+}
+
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+}
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img{
+     width: 90%;
+     max-width: 500px;
+}
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+    </style>
+</body>
+</html>

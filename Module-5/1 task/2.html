@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>innerText vs textContent Example</title>
+</head>
+<body>
+    <div id="myDiv">
+        Yeh dikhai deta hai!
+        <span style="display:none;">Yeh chhupa hua hai!</span>
+    </div>
+
+    <script>
+        var divElement = document.getElementById("myDiv");
+
+        // innerText
+        var innerTextValue = divElement.innerText;
+        console.log("innerText: " + innerTextValue);
+
+        // textContent
+        var textContentValue = divElement.textContent;
+        console.log("textContent: " + textContentValue);
+    </script>
+</body>
+</html>

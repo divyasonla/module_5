@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+   <script src="fav.js" defer></script>
+   <link rel="stylesheet" type="text/css" href="fav.css">
+</head>
+
+
+<body>
+   <div class="dark-background text-center">
+       <div>
+           <img src="https://img.freepik.com/free-vector/realistic-light-bulb-with-electricity_23-2149129410.jpg?w=826&t=st=1720170545~exp=1720171145~hmac=c712e8059e2365c42472470f84e04ce913054840d6533d576b132359bcac99ab" class="bulb-image" id="bulbImage" />
+       </div>
+       <div>
+           <img src="https://i.ibb.co/PQxg5Cz/cat-food.png" class="cat-image" id="catImage" />
+       </div>
+       <div class="cneter-content pt-6">
+           <div class="switch-board">
+               <h1 class="switch-status" id="switchstatus">Switched On</h1>
+               <button class="off-switch" onclick="switchoff()" id="offswitch">OFF</button>
+               <button class="on-switch" onclick="switchon()" id="onswitch">ON</button>
+           </div>
+       </div>
+   </div>
+   <style>
+    .dark-background {
+   background-color: #0b0b0b;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+}
+
+
+.bulb-image {
+   width: 150px;
+}
+
+
+.cat-image {
+   width: 300px;
+}
+
+
+.switch-board {
+   width: 294px;
+   height: 139px;
+   background-color: #7b8794;
+   border-radius: 12px;
+   padding-top: 32px;
+   padding-bottom: 32px;
+   padding-left: 16px;
+   padding-right: 16px;
+   margin: 16px;
+}
+
+
+.switch-status {
+   font-family: "Roboto";
+   font-weight: 500;
+   font-size: 24px;
+   color: #ffffff;
+   margin-bottom: 24px;
+}
+
+
+.on-switch {
+   font-family: "Roboto";
+   font-weight: bold;
+   font-size: 24px;
+   color: #ffffff;
+   border-radius: 8px;
+   width: 99px;
+   height: 44px;
+   margin-left: 16px;
+   background-color: #cbd2d9;
+}
+
+
+.off-switch {
+   font-family: "Roboto";
+   font-weight: bold;
+   font-size: 24px;
+   color: #ffffff;
+   border-radius: 8px;
+   width: 99px;
+   height: 44px;
+   background-color: #e12d39;
+}
+
+
+.cneter-content{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+
+}
+
+   </style>
+   <script>
+    function switchoff() {
+    document.getElementById('switchstatus').textContent = 'Switched Off';
+}
+
+function switchon() {
+    document.getElementById('switchstatus').textContent = 'Switched On';
+}
+
+   </script>
+</body>
+
+
+</html>

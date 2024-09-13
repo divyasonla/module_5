@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .form-group textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mentees' Weekly Progress Report</h1>
+    <form id="feedbackForm">
+      <div class="form-group">
+        <label for="menteeName">Mentee Name</label>
+        <input type="text" id="menteeName" name="menteeName" required>
+      </div>
+      <div class="form-group">
+        <label for="mentorName">Mentor Name</label>
+        <input type="text" id="mentorName" name="mentorName" required>
+      </div>
+      <div class="form-group">
+        <label for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="bestPerformance">What did the mentee do best last week?</label>
+        <textarea id="bestPerformance" name="bestPerformance" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="improvementAreas">Areas for Improvement</label>
+        <textarea id="improvementAreas" name="improvementAreas" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="menteeEmail">Mentee Email</label>
+        <input type="email" id="menteeEmail" name="menteeEmail" required>
+      </div>
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+  </div>
+  <script>
+    function submitForm() {
+      var form = document.getElementById('feedbackForm');
+      var formData = {
+        menteeName: form.menteeName.value,
+        mentorName: form.mentorName.value,
+        feedback: form.feedback.value,
+        bestPerformance: form.bestPerformance.value,
+        improvementAreas: form.improvementAreas.value,
+        menteeEmail: form.menteeEmail.value
+      };
+      
+      google.script.run.processForm(formData);
+      
+      form.reset();
+      alert('Form submitted successfully!');
+    }
+  </script>
+</body>
+</html>

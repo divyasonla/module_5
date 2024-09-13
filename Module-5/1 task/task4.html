@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const div=document.createElement("div");
+        div.style.backgroundImage ="url('https://img.freepik.com/free-photo/people-taking-photos-food_23-2149303525.jpg?w=1380&t=st=1705607469~exp=1705608069~hmac=278471867b312bc0088e9ffac7a2f27addf229e5e57bacefa17334eee38448ad')"
+         div.style.height='100vh';
+         div.style.width='100%'
+         div.style.backgroundSize='cover';
+         div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.style.justifyContent = 'flex-end';
+        //  div.style.padding='100px'
+        //  div.style.backgroundPosition='center'
+
+
+           
+
+
+        const div1=document.createElement("div")
+        div1.style.backgroundColor='#f6c56e';
+        // div1.style.padding='0px';
+        // div1.style.marginBottom = '200px';
+        div1.style.textAlign = 'bottom'; 
+        div1.style.width = '100%';
+        
+
+
+        const h=document.createElement("h1");
+        h.textContent='Happy Meals';
+        h.style.color='#323f4b';
+        h.style.textAlign='left';
+        h.style.fontFamily='Bree Serif';
+         h.style.marginBottom='20px';
+
+
+         div1.appendChild(h);
+
+         const p=document.createElement("p");
+         p.textContent='Discover the best foods over the 1000 restaurants';
+         p.style.textAlign='left';
+         p.style.fontFamily='Roboto';
+
+
+          div1.appendChild(p);
+
+          const btn=document.createElement("button");
+           btn.innerText='Book Now';
+           btn.style.color='#ffffff';
+           btn.style.color='black'
+           btn.style.fontFamily='Roboto';
+           btn.style.textAlign='left';
+           btn.style.cursor='pointer'
+           div1.appendChild(btn)
+           
+            div.appendChild(div1)
+           document.body.appendChild(div);
+
+    </script>
+</body>
+</html>

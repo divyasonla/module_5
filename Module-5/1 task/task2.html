@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // const backgroundDiv=document.createElement("div");
+        //  const div=document.createElement("div");
+        //   const p=document.createElement("p");
+        //   p.textContent='Hello';
+        //   div.appendChild(p);
+        // //   backgroundDiv.appendChild(div)
+
+        document.addEventListener("DOMContentLoaded", function() {
+    // Create elements
+    const divBackground = document.createElement("div");
+    const h1Heading = document.createElement("h1");
+    const divWhole = document.createElement("div");
+    const pTextSent1 = document.createElement("p");
+    const pTextRec1 = document.createElement("p");
+    const pTextSent2 = document.createElement("p");
+    const pTextRec2 = document.createElement("p");
+    const pTextSent3 = document.createElement("p");
+    const pTextRec3 = document.createElement("p");
+    const pTextSent4 = document.createElement("p");
+
+    // Set classes and content
+    divBackground.className = "background";
+    h1Heading.className = "heading";
+    divWhole.className = "whole";
+    pTextSent1.className = "text-sent";
+    pTextRec1.className = "text-rec";
+    pTextSent2.className = "text-sent";
+    pTextRec2.className = "text-rec";
+    pTextSent3.className = "text-sent";
+    pTextRec3.className = "text-rec";
+    pTextSent4.className = "text-sent";
+
+    h1Heading.textContent = "Chat";
+    pTextSent1.textContent = "Hello";
+    pTextRec1.textContent = "How are you";
+    pTextSent2.textContent = "I'm fine";
+    pTextRec2.textContent = "Html, css";
+    pTextSent3.textContent = "yes";
+    pTextRec3.textContent = "awesome";
+    pTextSent4.textContent = "caal you?";
+
+    // Append elements
+    divWhole.appendChild(pTextSent1);
+    divWhole.appendChild(pTextRec1);
+    divWhole.appendChild(pTextSent2);
+    divWhole.appendChild(pTextRec2);
+    divWhole.appendChild(pTextSent3);
+    divWhole.appendChild(pTextRec3);
+    divWhole.appendChild(pTextSent4);
+
+    divBackground.appendChild(h1Heading);
+    divBackground.appendChild(divWhole);
+
+    document.body.appendChild(divBackground);
+
+    // Apply styles
+    // divBackground.style.backgroundImage = "url('https://i.ibb.co/RbV2JPr/chatbg-1.png')";
+    divBackground.style.backgroundSize = "cover";
+    divBackground.style.height = "100vh";
+
+    h1Heading.style.color = "black";
+    h1Heading.style.backgroundColor = "blue";
+    h1Heading.style.fontSize = "20px";
+    h1Heading.style.textAlign = "center";
+    h1Heading.style.fontFamily = "'Times New Roman', Times, serif";
+    h1Heading.style.fontWeight = "bold";
+    h1Heading.style.padding = "14px";
+
+    divWhole.style.padding = "14px";
+    divWhole.style.color = "black";
+    divWhole.style.fontFamily = "'Courier New', Courier, monospace";
+    divWhole.style.fontSize = "12px";
+
+    const textRecStyles = {
+        backgroundColor: "yellow",
+        padding: "12px",
+        borderTopLeftRadius: "12px",
+        borderTopRightRadius: "12px",
+        borderBottomRightRadius: "12px",
+        textAlign: "left"
+    };
+
+    const textSentStyles = {
+        backgroundColor: "lightgreen",
+        padding: "12px",
+        borderTopLeftRadius: "12px",
+        borderTopRightRadius: "12px",
+        borderBottomRightRadius: "12px",
+        textAlign: "right"
+    };
+
+    Object.assign(pTextRec1.style, textRecStyles);
+    Object.assign(pTextRec2.style, textRecStyles);
+    Object.assign(pTextRec3.style, textRecStyles);
+
+    Object.assign(pTextSent1.style, textSentStyles);
+    Object.assign(pTextSent2.style, textSentStyles);
+    Object.assign(pTextSent3.style, textSentStyles);
+    Object.assign(pTextSent4.style, textSentStyles);
+});
+
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App</title>
+</head>
+<body>
+    <script>
+        // Creating the main div with class "background"
+        const backgroundDiv = document.createElement('div');
+        backgroundDiv.className = 'background';
+        document.body.appendChild(backgroundDiv);
+
+        // Creating the heading with class "heading"
+        const heading = document.createElement('h1');
+        heading.className = 'heading';
+        heading.innerText = 'Chat';
+        backgroundDiv.appendChild(heading);
+
+        // Creating the div with class "whole"
+        const wholeDiv = document.createElement('div');
+        wholeDiv.className = 'whole';
+        backgroundDiv.appendChild(wholeDiv);
+
+        // Creating the chat messages
+        const messages = [
+            { text: 'Hello', class: 'text-sent' },
+            { text: 'How are you', class: 'text-rec' },
+            { text: "I'm fine", class: 'text-sent' },
+            { text: 'Html, css', class: 'text-rec' },
+            { text: 'yes', class: 'text-sent' },
+            { text: 'awesome', class: 'text-rec' },
+            { text: 'call you?', class: 'text-sent' }
+        ];
+
+        // messages.forEach(message => {
+        //     const p = document.createElement('p');
+        //     p.className = message.class;
+        //     p.innerText = message.text;
+        //     wholeDiv.appendChild(p);
+        // });
+
+
+        for(let key of messages)
+        {
+             const p = document.createElement('p');
+            // p.className = key.class;
+            //  p.innerText = key.text;
+            //   wholeDiv.appendChild(p);
+            const p1 = document.createElement('p');
+
+
+
+
+            if(key.class == 'text-sent')
+            {
+                            p.className = key.class;
+
+             p.innerText = key.text;
+                           wholeDiv.appendChild(p);
+
+            }
+            else{
+                p1.className = key.class;
+
+                p1.innerText = key.text;
+                wholeDiv.appendChild(p1);
+            }
+
+
+        }
+        // Applying the styles
+        const styles = `
+            .background {
+                background-image: url("https://i.ibb.co/RbV2JPr/chatbg-1.png");
+                background-size: cover;
+                height: 100vh;
+            }
+            .heading {
+                color: white;
+                background-color: maroon;
+                font-size: 20px;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bold;
+                padding: 14px;
+            }
+            .whole {
+                padding: 14px;
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 12px;
+            }
+            .text-rec {
+                background-color: pink ;
+                padding: 12px;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+                text-align: left;
+            }
+            .text-sent {
+                background-color: lightgreen;
+                padding: 12px;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+                text-align: right;
+            }
+        `;
+
+        // Creating a style element and adding the styles
+        const styleSheet = document.createElement("style");
+        styleSheet.type = "text/css";
+        styleSheet.innerText = styles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html> -->

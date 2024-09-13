@@ -1,0 +1,60 @@
+body, h1, h2, h3, p, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light background color for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.img-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of images to the next line */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the gallery container */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 80%;
+}
+
+/* Styling individual images */
+.img-gallery a img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.img-gallery a img:hover {
+    transform: scale(1.1); /* Image zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Centering the gallery using the center tag */
+center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 600px) {
+    .img-gallery {
+        flex-direction: column; /* Stack images vertically on small screens */
+        gap: 10px;
+    }
+
+    .img-gallery a img {
+        width: 100%; /* Make images full-width on mobile */
+    }
+}
+

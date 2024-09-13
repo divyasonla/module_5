@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<img id="change" src="https://emojiisland.com/cdn/shop/products/Unhappy_Face_Emoji_Icon_ios10_large.png?v=1571606093 " height="200px">
+
+  <button id="face" onclick="changeimg()">UnHappy</button>
+
+    <script>
+
+        function changeimg(){
+
+        var h=document.getElementById("change");
+        h.src='https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/65532/happy-emoji-clipart-md.png';
+        h.style.height='200px';
+        h.style.width='200px';
+        
+        var f=document.getElementById("face");
+        f.innerText='Happy';
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <script>
+        document.body.style.display='flex';
+        document.body.style.justifyContent='center';
+        document.body.style.alignItems='center';
+        document.body.style.height='100vh';
+        document.body.style.margin='0';
+        document.body.style.fontFamily='Arial,sans-serif';
+
+        const div = document.createElement("div");
+        div.style.backgroundImage = "url('https://img.freepik.com/free-photo/people-taking-photos-food_23-2149303525.jpg?w=1380&t=st=1705607469~exp=1705608069~hmac=278471867b312bc0088e9ffac7a2f27addf229e5e57bacefa17334eee38448ad')";
+        div.style.height = '100vh';
+        div.style.width = '100%';
+        div.style.backgroundSize = 'cover';
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.style.justifyContent = 'flex-end';
+
+        const footer = document.createElement("footer");
+        footer.style.backgroundColor = '#f6c56e';
+        footer.style.width = '100%';
+        // footer.style.padding = '20px';
+
+        const h = document.createElement("h1");
+        h.textContent = 'Happy Meals';
+        h.style.color = '#323f4b';
+        h.style.textAlign = 'left';
+        h.style.fontFamily = 'Bree Serif';
+        h.style.marginBottom = '20px';
+
+        footer.appendChild(h);
+
+        const p = document.createElement("p");
+        p.textContent = 'Discover the best foods over the 1000 restaurants';
+        p.style.textAlign = 'left';
+        p.style.fontFamily = 'Roboto';
+
+        footer.appendChild(p);
+
+        const btn = document.createElement("button");
+        btn.innerText = 'Book Now';
+        btn.style.backgroundColor = '#ffffff';
+        btn.style.Color = 'black';
+        btn.style.fontFamily = 'Roboto';
+        btn.style.textAlign = 'left';
+        btn.style.cursor = 'pointer';
+
+        footer.appendChild(btn);
+
+        div.appendChild(footer);
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using onclick</title>
+</head>
+<body>
+    <center><h1 id="nav">Web Technologies</h1></center>
+    <center><div>
+        <button onclick="changeheading()"> Change Heading</button>
+    </div>
+</center>
+
+<script>
+    // const h=document.getElementById("nav");
+    // h.textContent="4.0 Technologies";
+    // h.style.color='blue';
+    function changeheading(){
+        var heading=document.getElementById("nav");
+        heading.textContent='Heading After';
+        heading.style.color='blue';
+    }
+</script>
+    
+</body>
+</html>
